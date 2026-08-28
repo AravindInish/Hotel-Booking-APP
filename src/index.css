@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --card: #141414;
+    --card-secondary: #1a1a1a;
+    --accent: #C5A059;
+    --accent-hover: #d4af37;
+    --border: #262626;
+    --border-light: #333333;
+    --text: #e0e0e0;
+    --text-heading: #ffffff;
+    --muted: #888888;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    selection-background-color: var(--accent);
+    selection-color: #000000;
+  }
+
+  h1, h2, h3, h4, .serif, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+
+  .font-display-luxury {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+/* Sophisticated Dark utility styles */
+.bg-dark-bg {
+  background-color: #0a0a0a;
+}
+
+.bg-dark-card {
+  background-color: #141414;
+}
+
+.bg-dark-secondary {
+  background-color: #1a1a1a;
+}
+
+.border-dark-border {
+  border-color: #262626;
+}
+
+.text-dark-accent {
+  color: #C5A059;
+}
+
+.text-dark-muted {
+  color: #888888;
+}
+
+/* Gold shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f0dfb8 0%, #C5A059 50%, #9e7d3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.status-badge {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  border: 1px solid #C5A059;
+  color: #C5A059;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Print Voucher styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-voucher, #printable-voucher * {
+    visibility: visible;
+  }
+  #printable-voucher {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+  }
+}

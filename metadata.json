@@ -1,0 +1,6 @@
+{
+  "name": "AI Hotels & Rooms",
+  "description": "Modern luxury hotel booking platform powered by Google Apps Script and Google Sheets with guest booking, room availability engine, hotel management, and super admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
